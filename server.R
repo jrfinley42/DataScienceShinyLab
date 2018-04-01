@@ -10,7 +10,7 @@ shinyServer(
     
     output$map <- renderPlot({
       x <- switch(input$var, "Percent White" = "white", "Percent Black" = "black", "Percent Hispanic" = "hispanic", "Percent Asian" = "asian")
-      y <- switch(input$var, "Percent White" = 'skyblue', "Percent Black" = 'yellow', "Percent Hispanic" = 'red', "Percent Asian" = 'green')
+      y <- switch(input$var, "Percent White" = 'dodgerblue4', "Percent Black" = 'darkgoldenrod', "Percent Hispanic" = 'firebrick4', "Percent Asian" = 'chartreuse4')
       percent_map( counties[, x], col = y, legend.title = input$var, min = input$range[1], max = input$range[2] )
     })
       
